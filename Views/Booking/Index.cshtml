@@ -3,12 +3,32 @@
 }
 @model List<HotelBooking>
 
-<ul>
-    @foreach(var booking in Model)
-    {
-        <li>@booking.Id :- @booking.GuestName - @booking.RoomNumber</li>
-    }
-</ul>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ime Gosta</th>
+            <th>Dodijeljena soba</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model)
+        {
+            <tr>
+                <td>
+                    @booking.Id
+                </td>
+                <td>
+                    @booking.GuestName    
+                </td>
+                <td>
+                    @booking.RoomNumber
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
 
 
 
