@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Bookings";
+}
+@model List<HotelBooking>
+
+<ul>
+    @foreach(var booking in Model)
+    {
+        <li>@booking.Id :- @booking.GuestName - @booking.RoomNumber</li>
+    }
+</ul>
+
+
+
